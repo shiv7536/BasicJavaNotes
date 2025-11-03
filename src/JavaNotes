@@ -23,3 +23,35 @@ Useful when the type is obvious or too long to write.
 Can only be used for local variables (inside methods).
 
 
+Java Operators
+Operators in Java are symbols used to perform operations on variables and values.
+Types of Operators in Java:
+Arithmetic Operators – perform mathematical operations.
+👉 +, -, *, /, %
+
+Relational Operators – compare two values.
+👉 ==, !=, >, <, >=, <=
+
+Logical Operators – combine multiple conditions.
+👉 &&, ||, !
+
+Assignment Operators – assign values to variables.
+👉 =, +=, -=, *=, /=, %=
+
+Unary Operators – operate on a single operand.
+👉 ++, --, +, -, !
+
+Bitwise Operators – perform bit-level operations.
+👉 &, |, ^, ~, <<, >>, >>>
+
+Ternary Operator – shorthand for if-else.
+👉 condition ? value1 : value2
+
+Instanceof Operator – checks object type.
+👉 obj instanceof ClassName
+
+
+
+
+
+
