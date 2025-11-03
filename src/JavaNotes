@@ -1,0 +1,25 @@
+Definition of Java Variables (short and clear):
+A variable in Java is a named memory location used to store data that can be changed during program execution.
+
+Java data types
+Java data types define the type of data a variable can hold, such as numbers, characters, or logical values.
+
+Tpypes of data types in Java:
+primitive Data Types: Primitive data types are the basic built-in types in Java that store simple values like numbers, characters, or booleans.
+non-primitive Data Types: Non-primitive data types are user-defined or complex types that store objects or collections of data.
+
+Introduction of var Keyword:
+The var keyword in Java (introduced in Java 10) is used for local variable type inference — it lets the compiler automatically determine the variable’s 
+data type based on the assigned value.
+
+var name = "Shiv";   // compiler infers String
+var age = 25;        // compiler infers int
+
+Uses:
+
+
+Reduces code length and improves readability.
+Useful when the type is obvious or too long to write.
+Can only be used for local variables (inside methods).
+
+
