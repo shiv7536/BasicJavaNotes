@@ -37,7 +37,7 @@ public class JavaStrings {
 		
 		String txt = "   Hello World   ";
 		System.out.println("Before: [" + txt + "]");
-		System.out.println("After:  [" + txt.trim() + "]");
+		System.out.println("After:  [" + txt.trim() + "]"); // Removes whitespace from both ends
 		
 		
 

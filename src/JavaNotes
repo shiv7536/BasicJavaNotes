@@ -52,6 +52,76 @@ Instanceof Operator – checks object type.
 
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+If and Else – Definition (Short Notes):
+
+if statement:
+Used to test a condition. If the condition is true, the code inside the if block executes.
+if (condition) {
+    // code to execute if condition is true
+}
+
+
+else statement:
+Used with if to run an alternative block of code when the condition is false.
+
+👉 Syntax:
+if (condition) {
+    // code if condition is true
+} else {
+    // code if condition is false
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Logical Operators in Conditions
+You can combine or reverse conditions using logical operators. These work together with if, else, and else if to build more complex decisions.
+
+&& (AND) - all conditions must be true
+|| (OR) - at least one condition must be true
+! (NOT) - reverses a condition (true = false, false = true)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Loops – Short Notes:
+
+Definition:
+A loop is used to repeat a block of code multiple times until a certain condition is met.
+It helps reduce code repetition and improves efficiency.
+
+🌀 Types of Loops in Java:
+
+for loop
+Used when you know how many times you want to repeat the code.
+
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+
+
+🔹 Runs from i = 1 to 5.
+
+while loop
+Used when you don’t know the number of iterations in advance; runs as long as the condition is true.
+
+int i = 1;
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+
+
+do-while loop
+Executes the block at least once, even if the condition is false.
+
+int i = 1;
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+
 
 
 
