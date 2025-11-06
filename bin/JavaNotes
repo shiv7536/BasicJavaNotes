@@ -123,5 +123,847 @@ do {
 } while (i <= 5);
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+🌀 Do-While Loop (Short Notes)
+Definition:
+A do-while loop is a control statement that executes a block of code at least once, and then repeats the loop as long as the condition is true.
+
+Syntax:
+
+do {
+    // code to be executed
+} while (condition);
+
+
+Key Points:
+
+The condition is checked after the first execution.
+Ensures the loop runs at least one time.
+Ends with a semicolon (;) after the while condition.
+
+Example:
+
+int i = 1;
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+
+
+✅ Output:
+
+1
+2
+3
+4
+5
+
+Use Case:
+When you want the loop to run at least once regardless of the condition (e.g., user input validation).
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+@Java Switch Statement (Short Notes)
+
+Definition:
+The switch statement in Java is used to execute one block of code from multiple options based on the value of a variable or expression.
+
+Syntax:
+
+switch (expression) {
+    case value1:
+        // code to be executed
+        break;
+    case value2:
+        // code to be executed
+        break;
+    default:
+        // code to be executed if no case matches
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+🧭 Java break and continue (Short Notes)
+Definition:
+The break statement is used to exit from a loop or switch statement immediately, even if the condition is still true.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+🧩 Java Array – Notes
+Definition:
+An array in Java is a collection of elements of the same data type, stored in contiguous memory locations. It allows you to store multiple values in a single variable.
+Declaration and Initialization:
+dataType[] arrayName = new dataType[arraySize];
+Example:
+int[] numbers = new int[5]; // Declaration
+numbers[0] = 10;             // Initialization
+numbers[1] = 20;
+numbers[2] = 30;
+numbers[3] = 40;
+numbers[4] = 50;
+or
+int[] numbers = {10, 20, 30, 40, 50}; // Declaration and Initialization
+Accessing Array Elements:
+You can access array elements using their index (starting from 0).
+int firstNumber = numbers[0]; // Accessing the first element
+Array Length:
+You can get the length of an array using the length property.
+int length = numbers.length; // Gets the length of the array
+Iterating Through an Array:
+for (int i = 0; i < numbers.length; i++) {
+    System.out.println(numbers[i]);
+}
+or using enhanced for loop:
+for (int number : numbers) {
+    System.out.println(number);
+}
+Multidimensional Arrays:
+int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+Accessing elements:
+int element = matrix[1][2]; // Accessing element at row 1, column 2 (value 6)
+Array Benefits:
+Efficient storage and access of multiple values.
+Allows easy iteration and manipulation of data.
+Fixed size, which can be a limitation if dynamic sizing is needed.
+Array Limitations:
+Fixed size; cannot be resized after creation.
+Does not provide built-in methods for common operations (use Arrays class for that).
+Common Array Operations:
+Sorting: Arrays.sort(arrayName);
+Searching: Arrays.binarySearch(arrayName, key);
+Copying: Arrays.copyOf(originalArray, newLength);
+Java Collections Framework:
+For dynamic data structures, consider using ArrayList, LinkedList, HashMap, etc., from the Java Collections Framework.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+🧩 Java Methods – Short Notes
+Definition:
+A method in Java is a block of code that performs a specific task. It is defined once and can be called multiple times from different parts of the program.
+Method Declaration:
+returnType methodName(parameterType parameterName) {
+    // method body
+    // return statement (if returnType is not void)
+}
+Example:
+int add(int a, int b) {
+    return a + b;
+}
+Calling a Method:
+int sum = add(5, 10); // Calls the add method with arguments 5 and 10
+Method Parameters:
+Parameters are variables that are passed to methods to provide input data.
+You can have multiple parameters separated by commas.
+void greet(String name, int age) {
+    System.out.println("Hello " + name + ", you are " + age + " years old.");
+}
+Method Return Types:
+Methods can return a value using the return statement.
+If a method does not return a value, its return type is void.
+int multiply(int x, int y) {
+    return x * y;
+}
+void displayMessage() {
+    System.out.println("This method does not return a value.");
+}
+Method Overloading:
+Method overloading allows multiple methods with the same name but different parameter lists.
+int add(int a, int b) {
+    return a + b;
+}
+double add(double a, double b) {
+    return a + b;
+}
+Recursion:
+A method can call itself to solve a problem recursively.
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+Access Modifiers:
+Methods can have access modifiers (public, private, protected) to control visibility.
+public void publicMethod() { }
+private void privateMethod() { }
+protected void protectedMethod() { }
+	Static Methods:
+	Static methods belong to the class rather than an instance and can be called without creating an object.
+	static void staticMethod() {
+    System.out.println("This is a static method.");
+        }
+        Instance Methods:
+        Instance methods belong to an object and require an instance of the class to be called.
+        void instanceMethod() {
+        System.out.println("This is an instance method.");
+        }
+        Java Standard Library:
+        The Java Standard Library provides many built-in methods in classes like Math, String, Arrays, etc.
+        Example: Math.sqrt(16); // returns 4.0
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Classes and Objects – Short Notes
+        Definition:
+        A class in Java is a blueprint for creating objects. An object is an instance of a class that contains data and methods to manipulate that data.
+        Class Declaration
+        class ClassName {
+        // fields (attributes)
+        // methods (behaviors)
+        }
+        Example:
+        class Car {
+        String color;
+        int speed;
+        void accelerate() {
+            speed += 10;
+        }
+        }
+        Creating Objects:
+        Car myCar = new Car(); // Creating an object of the Car class
+        Accessing Fields and Methods:
+        myCar.color = "Red"; // Setting the color field
+        myCar.accelerate(); // Calling the accelerate method
+        Constructors:
+        A constructor is a special method used to initialize objects.
+        Car(String carColor) {
+        color = carColor;
+        speed = 0;
+        }
+        Inheritance:
+        Inheritance allows a class to inherit properties and methods from another class.
+        class ElectricCar extends Car {
+        int batteryCapacity;
+        }
+        Encapsulation:
+        Encapsulation is the practice of restricting access to certain fields and methods using access modifiers (private, public, protected).
+        private String model;
+        public String getModel() {
+        return model;
+        }
+        Polymorphism:
+        Polymorphism allows methods to do different things based on the object that it is acting upon.
+        void start() {
+        System.out.println("Car is starting");
+        }
+        void start() {
+        System.out.println("Electric car is starting silently");
+        }
+        Abstraction:
+        Abstraction is the concept of hiding complex implementation details and showing only the necessary parts.
+        abstract class Vehicle {
+        abstract void move();
+        }
+        Java Standard Library:
+        The Java Standard Library provides many built-in classes and objects for various functionalities like data structures, file handling, networking, etc.
+        Example: String, ArrayList, HashMap, etc.
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Constructors – Short Notes
+        Definition:
+        A constructor in Java is a special method that is called when an object of a class is created. It is used to initialize the object's attributes.
+        Constructor Declaration:
+        class ClassName {
+        ClassName(parameters) {
+        // initialization code
+        }
+        }
+        Example:
+        class Person {
+        String name;
+        int age;
+        Person(String personName, int personAge) {
+        name = personName;
+        age = personAge;
+        }
+        }
+        Creating Objects with Constructors:
+        Person person1 = new Person("Alice", 30);
+        Person person2 = new Person("Bob", 25);
+        Types of Constructors:
+        Default Constructor: A constructor with no parameters. If no constructor is defined, Java provides a default constructor.
+        Parameterized Constructor: A constructor that takes parameters to initialize object attributes.
+        Person() {
+        name = "Unknown";
+        age = 0;
+        }
+        Constructor Overloading:
+        You can have multiple constructors with different parameter lists in the same class.
+        Person(String personName) {
+        
+        name = personName;
+        age = 0;
+        }
+        Access Modifiers:
+        Constructors can have access modifiers (public, private, protected) to control visibility.
+        public Person(String personName, int personAge) {
+        name = personName;
+        age = personAge;
+        }
+        private Person() {
+        name = "Private";
+        age = 0;
+        }
+        this Keyword:
+        The this keyword is used to refer to the current object's attributes and methods.
+        Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+        }
+        Chaining Constructors:
+        You can call one constructor from another using this().
+        Person(String name) {
+        this(name, 0); // Calls the parameterized constructor
+        }
+        Java Standard Library:
+        Many classes in the Java Standard Library use constructors for object creation, such as String, ArrayList, etc.
+        Example: String str = new String("Hello");
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Inheritance – Short Notes
+        Definition:
+        Inheritance is a fundamental concept in object-oriented programming that allows a new class (subclass/child class) to inherit
+        properties and behaviors (fields and methods) from an existing class (superclass/parent class).
+        Syntax:
+        class SubclassName extends SuperclassName {
+        // additional fields and methods
+        }
+        Example:
+        class Animal {
+        void eat() {
+        System.out.println("This animal eats food.");
+        }
+        }
+        class Dog extends Animal {
+        void bark() {
+        System.out.println("The dog barks.");
+        }
+        }
+        Creating Objects:
+        Dog myDog = new Dog();
+        myDog.eat(); // Inherited method
+        myDog.bark(); // Subclass method
+        Types of Inheritance:
+        Single Inheritance: A subclass inherits from one superclass.
+        Multilevel Inheritance: A subclass inherits from a superclass, which in turn inherits from another superclass.
+        Hierarchical Inheritance: Multiple subclasses inherit from a single superclass.
+        Accessing Superclass Members:
+        Use the super keyword to access superclass methods and
+        constructors.
+        class Cat extends Animal {
+        void makeSound() {
+        super.eat(); // Calls the superclass method
+        System.out.println("The cat meows.");
+        }
+        }
+        Method Overriding:
+        A subclass can provide a specific implementation of a method already defined in its superclass.
+        @Override
+        void eat() {
+        System.out.println("The dog eats dog food.");
+        }
+        super.eat(); // Calls the superclass method
+        }
+        Benefits of Inheritance:
+        Code Reusability: Inherited code can be reused in subclasses.
+        Method Overriding: Subclasses can modify inherited behavior.
+        Polymorphism: Enables dynamic method resolution.
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Polymorphism – Short Notes
+        Definition:
+        Polymorphism is an object-oriented programming concept that allows methods to perform different tasks based on the object that it is acting upon.
+        Types of Polymorphism:
+        Compile-time Polymorphism (Method Overloading): Achieved by defining multiple methods with the same name but different parameter lists within the same class.
+        Example:
+        class MathOperations {
+        int add(int a, int b) {
+        return a + b;
+        }
+        double add(double a, double b) {
+        return a + b;
+        }
+        }
+        Runtime Polymorphism (Method Overriding): Achieved when a subclass provides a specific implementation of a method already defined in its superclass.
+        Example:
+        class Animal {
+        void sound() {
+        System.out.println("Animal makes a sound");
+        }
+        }
+        class Dog extends Animal {
+        @Override
+        void sound() {
+        System.out.println("Dog barks");
+        }
+        }
+        Animal myAnimal = new Dog();
+        myAnimal.sound(); // Outputs: Dog barks
+        Benefits of Polymorphism:
+        Code Reusability: Same method name can be used for different functionalities.
+        Flexibility: Objects can be treated as instances of their parent class.
+        Maintainability: Easier to manage and extend code.
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Encapsulation – Short Notes
+        Definition:
+        Encapsulation is an object-oriented programming principle that restricts direct access to an object's data and methods,
+        promoting data hiding and modularity.
+        Implementation:
+        Use private access modifiers for class fields.
+        Provide public getter and setter methods to access and modify the private fields.
+        Example:
+        class Person {
+        private String name;
+        private int age;
+        public String getName() {
+        return name;
+        }
+        public void setName(String name) {
+        this.name = name;
+        }
+        public int getAge() {
+        return age;
+        }
+        public void setAge(int age) {
+        if (age >= 0) {
+        this.age = age;
+        }
+        }
+        }
+        Benefits of Encapsulation:
+        Data Hiding: Protects object integrity by preventing unauthorized access.
+        Controlled Access: Allows validation and control over data modification.
+        Improved Maintainability: Changes to the internal implementation do not affect external code.
+        Enhanced Modularity: Promotes separation of concerns within the code.
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Abstraction – Short Notes
+        Definition:
+        Abstraction is an object-oriented programming principle that focuses on hiding complex implementation details and exposing only the essential features of an object.
+        Implementation:
+        Use abstract classes and interfaces to define abstract types.
+        Abstract Class: A class that cannot be instantiated and may contain abstract methods (methods without a body).
+        abstract class Shape {
+        abstract void draw();
+        }
+        Interface: A reference type that can contain only abstract methods (prior to Java 8) and constants.
+        interface Drawable {
+        void draw();
+        }
+        Benefits of Abstraction:
+        Simplifies Complex Systems: Hides unnecessary details from the user.
+        Enhances Code Reusability: Abstract types can be implemented by multiple classes.
+        Improves Maintainability: Changes to implementation do not affect the abstract interface.
+        Promotes Focus on Essential Features: Users interact with objects at a higher level of abstraction.
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Packages – Short Notes
+        Definition:
+        A package in Java is a namespace that organizes a set of related classes and interfaces. It helps avoid naming conflicts and promotes modularity.
+        Creating a Package:
+        package packageName;
+        Example:
+        package com.example.utils;
+        public class MathUtils {
+        public static int add(int a, int b) {
+        return a + b;
+        }
+        }
+        Importing Packages:
+        import packageName.ClassName;
+        import com.example.utils.MathUtils;
+        Using Wildcard to Import All Classes:
+        import packageName.*;
+        import com.example.utils.*;
+        Benefits of Packages:
+        Namespace Management: Prevents naming conflicts by grouping related classes.
+        Code Organization: Helps organize classes into logical groups.
+        Access Control: Provides access protection through package-private visibility.
+        Reusability: Facilitates code reuse across different projects.
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Interfaces – Short Notes
+        Definition:
+        An interface in Java is a reference type that defines a contract of methods that implementing classes must provide. It allows for abstraction and multiple inheritance.
+        Interface Declaration:
+        interface InterfaceName {
+        // abstract methods
+        }
+        Example:
+        interface Animal {
+        void makeSound();
+        }
+        Implementing an Interface:
+        class Dog implements Animal {
+        @Override
+        void makeSound() {
+        System.out.println("Bark");
+        }
+        }
+        Multiple Inheritance with Interfaces:
+        interface Flyable {
+        void fly();
+        }
+        class Bird implements Animal, Flyable {
+        @Override
+        void makeSound() {
+        System.out.println("Chirp");
+        }
+        @Override
+        void fly() {
+        System.out.println("Flying");
+        }
+        }
+        Default Methods (Java 8 and later):
+        interface Vehicle {
+        default void start() {
+        System.out.println("Vehicle is starting");
+        }
+        }
+        Benefits of Interfaces:
+        Abstraction: Defines a contract without implementation details.
+        Multiple Inheritance: Allows a class to implement multiple interfaces.
+        Loose Coupling: Promotes flexibility and decouples code.
+        Reusability: Interfaces can be reused across different classes and projects.
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Abstract Classes – Short Notes
+        Definition:
+        An abstract class in Java is a class that cannot
+        be instantiated and may contain abstract methods (methods without a body) that must be implemented by subclasses.
+        Abstract Class Declaration:
+        abstract class ClassName {
+        // abstract methods
+        }
+        Example:
+        abstract class Shape {
+        abstract void draw();
+        }
+        Implementing an Abstract Class:
+        class Circle extends Shape {
+        @Override
+        void draw() {
+        System.out.println("Drawing a circle");
+        }
+        }
+        Creating Objects of Subclasses:
+        Shape myShape = new Circle();
+        myShape.draw(); // Outputs: Drawing a circle
+        Concrete Methods in Abstract Classes:	
+        An abstract class can also have concrete methods (methods with a body).
+        abstract class Animal {
+        void eat() {
+        System.out.println("This animal eats food.");
+        }
+        abstract void makeSound();
+        }
+        Benefits of Abstract Classes:
+        Code Reusability: Common code can be shared among subclasses.
+        Partial Abstraction: Allows a mix of abstract and concrete methods.
+        Enforces a Contract: Subclasses must implement abstract methods.
+        Promotes Polymorphism: Enables dynamic method resolution.
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Exception Handling – Short Notes
+        Definition:
+        Exception handling in Java is a mechanism that allows developers to manage runtime errors gracefully, ensuring the normal flow of program execution.
+        Key Components:
+        try block: Contains code that may throw an exception.
+        catch block: Handles the exception thrown by the try block.
+        finally block: Contains code that always executes, regardless of whether an exception occurred or not.
+        throw statement: Used to explicitly throw an exception.
+        throws keyword: Declares exceptions that a method may throw.
+        Example:	
+        try {
+        int result = 10 / 0; // This will throw ArithmeticException
+        } catch (ArithmeticException e) {
+        System.out.println("Cannot divide by zero.");
+        } finally {
+        System.out.println("Execution completed.");
+        }
+        Common Exception Types:
+        Checked Exceptions: Exceptions that must be declared or handled (e.g., IOException).
+        Unchecked Exceptions: Runtime exceptions that do not require declaration (e.g., NullPointerException).
+        Benefits of Exception Handling:
+        Improves Program Reliability: Prevents crashes due to unhandled exceptions.
+        Enhances Code Readability: Separates error-handling code from regular code.
+        Facilitates Debugging: Provides detailed error information.
+        Promotes Robustness: Allows recovery from errors and maintains program flow.
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java File I/O – Short Notes
+        Definition:
+        File I/O (Input/Output) in Java refers to the process of reading from and writing to files on the file system.
+        Key Classes:
+        File: Represents a file or directory path.
+        FileReader/FileWriter: Used for reading from and writing to text files.
+        BufferedReader/BufferedWriter: Provides efficient reading and writing of text.
+        FileInputStream/FileOutputStream: Used for reading from and writing to binary files.
+        Example of Reading a File:
+        try (BufferedReader br = new BufferedReader(new FileReader("input.txt"))) {
+        String line;
+        while ((line = br.readLine()) != null) {
+        System.out.println(line);
+        }
+        } catch (IOException e) {
+        e.printStackTrace();
+        }
+        Example of Writing to a File:
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("output.txt"))) {
+        bw.write("Hello, World!");
+        } catch (IOException e) {
+        e.printStackTrace();
+        }
+        Benefits of File I/O:
+        Data Persistence: Allows data to be stored and retrieved from files.
+        Flexibility: Supports various file formats (text, binary).
+        Efficient Data Handling: Buffered streams improve performance.
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Collections Framework – Short Notes
+        Definition:
+        The Java Collections Framework is a unified architecture that provides a set of classes and interfaces for storing and manipulating groups of objects.
+        Key Interfaces:
+        Collection: The root interface for all collection types.
+        List: An ordered collection that allows duplicate elements (e.g., ArrayList, LinkedList).
+        Set: A collection that does not allow duplicate elements (e.g., HashSet, TreeSet).
+        Map: A collection that maps keys to values (e.g., HashMap, TreeMap).
+        Queue: A collection used for holding elements prior to processing (e.g., LinkedList, PriorityQueue).
+        Key Classes:
+        ArrayList: A resizable array implementation of the List interface.
+        HashSet: A hash table implementation of the Set interface.
+        HashMap: A hash table implementation of the Map interface.
+        Example of Using ArrayList:
+        List<String> names = new ArrayList<>();
+        names.add("Alice");
+        names.add("Bob");
+        for (String name : names) {
+        System.out.println(name);
+        }
+        Example of Using HashMap:
+        Map<String, Integer> ageMap = new HashMap<>();
+        ageMap.put("Alice", 30);
+        ageMap.put("Bob", 25);
+        for (String name : ageMap.keySet()) {
+        System.out.println(name + ": " + ageMap.get(name));
+        }
+        Benefits of Java Collections Framework:
+        Simplifies Data Management: Provides ready-to-use data structures.
+        Enhances Performance: Optimized algorithms for common operations.
+        Promotes Code Reusability: Standardized interfaces and implementations.
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Generics – Short Notes
+        Definition:
+        Generics in Java is a feature that allows developers to define classes, interfaces, and methods with a placeholder for the data type, enabling type safety and code reusability.
+        Generic Class Declaration:
+        class ClassName<T> {
+        // class body
+        }
+        Example of a Generic Class:
+        class Box<T> {
+        private T item;
+        public void setItem(T item) {
+        this.item = item;
+        }
+        public T getItem() {
+        return item;
+        }
+        }
+        Creating Generic Objects:
+        Box<String> stringBox = new Box<>();
+        stringBox.setItem("Hello");
+        String item = stringBox.getItem();
+        Box<Integer> intBox = new Box<>();
+        intBox.setItem(123);
+        Integer number = intBox.getItem();
+        Generic Methods:
+        public <T> void printArray(T[] array) {
+        for (T element : array) {
+        System.out.println(element);
+        }
+        }
+        Benefits of Generics:
+        Type Safety: Catches type-related errors at compile time.
+        Code Reusability: Allows the same code to work with different data types.
+        Eliminates Casts: Reduces the need for explicit type casting.
+        Enhanced Readability: Makes code easier to understand and maintain.
+        -------------------------------------------------------------------------------------------------------------------------------------------------------
+        🧩 Java Lambda Expressions – Short Notes
+        Definition:
+        Lambda expressions in Java are a feature that allows you to write concise and functional-style code by providing a clear and simple way to represent a single method interface (functional interface) using an expression.
+        Syntax:
+        (parameters) -> expression
+        or
+        (parameters) -> { statements; }
+        Example of a Lambda Expression:
+        // Using a lambda expression to implement a functional interface
+        interface MathOperation {
+        int operation(int a, int b);
+        }
+        	MathOperation addition = (a, b) -> a + b;
+        	int result = addition.operation(5, 3); // result is 8
+        	Example with Collections:
+        	List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+        	names.forEach(name -> System.out.println(name));
+        	Benefits of Lambda Expressions:
+        	Conciseness: Reduces boilerplate code for implementing functional interfaces.
+        	Readability: Makes code easier to read and understand.
+        	Functional Programming: Enables functional programming concepts in Java.
+        	Improved Performance: Can lead to performance optimizations in certain scenarios.
+        	-------------------------------------------------------------------------------------------------------------------------------------------------------
+        	🧩 Java Stream API – Short Notes
+        	Definition:
+        	The Stream API in Java is a powerful feature that allows for functional-style operations on sequences of elements, such as collections, arrays, or I/O channels. It enables developers to process data in a declarative manner.
+        	Key Concepts:
+        	Stream: A sequence of elements that can be processed in parallel or sequentially.
+        	Pipeline: A series of stream operations that transform or process data.
+        	Intermediate Operations: Operations that return a new stream (e.g., filter, map).
+        	Terminal Operations: Operations that produce a result or side effect (e.g., collect, forEach).
+        	Example of Using Stream API:
+        	List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David");
+        	List<String> filteredNames = names.stream()
+        	    .filter(name -> name.startsWith("A"))
+        	    .collect(Collectors.toList());
+        	    System.out.println(filteredNames); // Output: [Alice]
+        	    Benefits of Stream API:
+        	    Declarative Code: Focuses on what to do rather than how to do it.
+        	    Parallel Processing: Easily enables parallel execution for improved performance.
+        	    Lazy Evaluation: Operations are not executed until a terminal operation is invoked.
+        	    Enhanced Readability: Makes complex data processing tasks easier to understand.
+        	    -------------------------------------------------------------------------------------------------------------------------------------------------------
+        	    🧩 Java Annotations – Short Notes
+        	    Definition:
+        	    Annotations in Java are a form of metadata that provide information about the program but are not part of the program itself. They can be used to give instructions to the compiler, runtime, or frameworks.
+        	    Common Built-in Annotations:
+        	    @Override: Indicates that a method is intended to override a method in a superclass.
+        	    @Deprecated: Marks a method or class as deprecated, indicating it should no longer be used.
+        	    @SuppressWarnings: Instructs the compiler to suppress specific warnings.
+        	    Custom Annotations:
+        	    @interface MyAnnotation {
+        	    String value();
+        	    }
+        	    @MyAnnotation(value = "Example")
+        	    public class MyClass {
+        	    }
+        	    Retention Policies:
+        	    SOURCE: Annotations are discarded by the compiler.
+        	    CLASS: Annotations are recorded in the class file but not available at runtime.
+        	    RUNTIME: Annotations are available at runtime through reflection.
+        	    Benefits of Annotations:
+        	    Code Clarity: Provides additional information about the code.
+        	    Tool Support: Enables tools and frameworks to process metadata.
+        	    Reduced Boilerplate: Simplifies configuration and reduces boilerplate code.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        	    
+Java Errors
+Definition:
+Errors in Java are serious issues that occur during the execution of a program, typically indicating problems that cannot be handled by the program itself. They are represented by the Error class and its subclasses in the Java language.
+Common Types of Errors:
+OutOfMemoryError: Occurs when the Java Virtual Machine (JVM) runs out of memory.
+StackOverflowError: Happens when the call stack exceeds its limit, often due to deep or infinite recursion.
+NoClassDefFoundError: Indicates that the JVM cannot find a class definition that was present during compile time.
+LinkageError: Occurs when there is a problem with linking classes, such as incompatible class versions.
+VirtualMachineError: A superclass for errors that occur in the JVM, such as OutOfMemoryError and StackOverflowError.
+Handling Errors:
+Errors are not meant to be caught or handled by applications. Instead, they indicate serious problems that should be addressed by fixing the underlying issue in the code or environment.
+If an Error occurs, it is generally best to allow the program to terminate and investigate the root cause.
+Prevention:
+Ensure proper memory management and avoid excessive resource consumption.
+Avoid deep recursion that can lead to stack overflow.
+Keep dependencies and libraries up to date to prevent linkage issues.
+Logging and Monitoring:
+Implement logging to capture error occurrences and monitor application health.
+Benefits of Understanding Errors:
+Helps in diagnosing and fixing critical issues in applications.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java Debugging
+Definition:
+Debugging in Java is the process of identifying, analyzing, and fixing bugs or errors in a Java program to ensure it functions as intended.
+Common Debugging Techniques:
+Print Statements: Inserting System.out.println() statements to track variable values and program flow.
+Using a Debugger: Utilizing IDEs like Eclipse, IntelliJ IDEA, or NetBeans that provide built-in debugging tools to set breakpoints, step through code, and inspect variables.
+Logging: Implementing logging frameworks (e.g., Log4j, SLF4J) to record application behavior and errors.
+Unit Testing: Writing test cases using frameworks like JUnit or TestNG to validate individual components of the code.
+Common Debugging Tools:
+Java Debugger (jdb): A command-line tool for debugging Java programs.
+Integrated Development Environments (IDEs): Provide graphical debugging tools with features like breakpoints, watch variables, and call stack inspection.
+Profilers: Tools like VisualVM or YourKit to analyze performance and memory usage.
+Best Practices for Debugging:
+Reproduce the Issue: Ensure you can consistently reproduce the bug before attempting to fix it.
+Isolate the Problem: Narrow down the code section where the bug occurs.
+Understand the Code: Review the relevant code to comprehend its logic and flow.
+Test Fixes: After making changes, test thoroughly to ensure the bug is resolved and no new issues are introduced.
+Document Findings: Keep notes on bugs encountered and their resolutions for future reference.
+Benefits of Effective Debugging:
+Improves Code Quality: Leads to more reliable and maintainable code.
+Enhances Problem-Solving Skills: Develops analytical thinking and troubleshooting abilities.
+Facilitates Learning: Helps understand the intricacies of Java programming and application behavior.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java File Handling
+Definition:
+File handling in Java refers to the process of creating, reading, writing, and manipulating files on the file system using Java's built-in classes and methods.
+Key Classes for File Handling:
+File: Represents a file or directory path.
+FileReader/FileWriter: Used for reading from and writing to text files.
+BufferedReader/BufferedWriter: Provides efficient reading and writing of text.
+FileInputStream/FileOutputStream: Used for reading from and writing to binary files.
+Example of Creating a File:
+import java.io.File;
+import java.io.IOException;
+public class FileExample {
+    public static void main(String[] args) {
+        try {
+            File myFile = new File("example.txt");
+            if (myFile.createNewFile()) {
+                System.out.println("File created: " + myFile.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}
+Example of Reading a File:
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class ReadFileExample {
+    public static void main(String[] args) {
+        try (BufferedReader br = new BufferedReader(new FileReader("example.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            }
+            }
+            }
+            Example of Writing to a File:
+            import java.io.BufferedWriter;
+            import java.io.FileWriter;
+            import java.io.IOException;
+            public class WriteFileExample {
+                public static void main(String[] args) {
+                    try (BufferedWriter bw = new BufferedWriter(new FileWriter("example.txt"))) {
+                        bw.write("Hello, World!");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            Benefits of File Handling:
+            Data Persistence: Allows data to be stored and retrieved from files.
+            Flexibility: Supports various file formats (text, binary).
+            Efficient Data Handling: Buffered streams improve performance.
+            --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            
+            
+   
+        	    	
+        	    	
+        
+        	
+        	
+        	
+        	
+        
+        
+
+
 
 
